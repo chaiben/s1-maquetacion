@@ -1,0 +1,152 @@
+body{
+    background-color: #eeeeee;
+}
+root{
+    background-color: #fff;
+    max-width: 72.5em;
+    margin: auto;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1.25em;
+}
+caja1, 
+caja2, 
+caja3{
+    background-color: #000;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1.25em;
+    
+}
+caja1, 
+caja3{
+    justify-content: center;
+}
+caja1 > linea1,
+caja1 > linea2{
+    background-color: #223a50;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1.25em;
+}
+caja1 > linea1 > col1, 
+caja1 > linea1 > col2, 
+caja1 > linea1 > col3 {
+    background-color: #fd4941;
+    height: 1.25em;
+    flex-grow: 1;
+}
+caja1 > linea1 > col2{
+    flex-grow: 4;
+}
+caja1 > linea2{
+    background-color: #ff6d21;
+}
+caja1 > linea2 > col1{
+    background-color: #ffc943;
+    height: 1.25em;
+    flex-grow: 1;
+}
+caja2{
+    flex-direction: row;
+}
+caja2 > col1{
+    background-color: #444660;
+    padding: 1.25em;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25em;
+
+}
+caja2 > col1 > linea1,
+caja2 > col1 > linea2{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1.25em;
+}
+caja2 > col1 > linea1 > lineaa,
+caja2 > col1 > linea1 > lineab,
+caja2 > col1 > linea2 > lineaa,
+caja2 > col1 > linea2 > lineab,
+caja2 > col1 > linea3 {
+    background-color: #0066a9;
+    height: 1.25em;
+    flex-grow: 1;
+}
+caja2 > col1 > linea3 {
+    background-color: #509bbf;
+}
+caja2 > col2{
+    background-color: #ff353c;
+    padding: 1.25em;
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+    flex-direction: column;
+}
+caja2 > col2 > linea1{
+    background-color: #ffe26e;
+    height: 1.25em;
+}
+caja3 > linea1{
+    background-color: #efa100;
+    height: 1.25em;
+}
+@media all and (max-width: 48em) {
+    caja2{
+        background-color: #fff900;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 48em) {
+    caja2{
+        background-color: #fff900;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 25em) {
+    caja1 > linea1 {
+        flex-direction: column;
+    }
+    caja2{
+        background-color: #ffd700;
+    }
+    caja2 > col1 {
+        background-color: #004866;
+    }
+    caja2 > col1 > linea1 > lineaa,
+    caja2 > col1 > linea1 > lineab,
+    caja2 > col1 > linea2 > lineaa,
+    caja2 > col1 > linea2 > lineab {
+        background-color: #428b92;
+    }
+    caja2 > col1 > linea3 {
+        background-color: #84d6c4;
+    }
+    caja2 > col2 {
+        background-color: #ff6d3c;
+    }
+
+    caja2 > col2 > linea1 {
+        background-color: #ffa654;
+    }
+    caja2 > col1 > linea1,
+    caja2 > col1 > linea2{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25em;
+    }
+}
