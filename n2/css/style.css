@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'fellgreat';
+    src: url("../font/IMFellGreatPrimer-Regular.woff2") format("woff2-variations"),
+    url("../font/IMFellGreatPrimer-Regular.woff2") format("woff");
+}
+body{
+    background-color: #fff;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #808080;
+    margin: 0;
+
+}
+root{
+    background-color: #fff;
+    max-width: 72.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    gap: 1.25rem;
+}
+caja1, 
+caja2, 
+caja3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+}
+caja1{
+    background-image: url("../img/header.jpg");
+    background-position: center 52.5%;
+    padding-top: 2rem;
+}
+caja1, 
+caja3{
+    justify-content: center;
+}
+caja1 > linea1,
+caja1 > linea2{
+    display: flex;
+    flex-direction: row;
+}
+caja1 > linea1 > col1, 
+caja1 > linea1 > col2, 
+caja1 > linea1 > col3 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+caja1 > linea1 > col1{
+    justify-content: center;
+}
+caja1 > linea1 > col1 .logo{
+    width: 4.375rem;
+    height: 4.1875rem;
+    align-self: center;
+}
+caja1 > linea1 > col2{
+    justify-content: space-evenly;
+    flex-grow: 4;
+}
+caja1 > linea1 > col3{
+    justify-content: center;
+}
+caja1 > linea1 > col2 > a,
+caja1 > linea1 > col3 > a{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+caja1 > linea2{
+    height: 16.25rem;
+    font-family: "fellgreat";
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+    color: #ff6430ad;
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: #ff6d21; */
+}
+caja1 > linea2 > col1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7b7b7b14;
+    flex-grow: 0.8;
+    text-align: center;
+    height: 46%;
+    padding-bottom: 0.8rem;
+}
+caja2{
+    flex-direction: row;
+}
+caja2 > col1{
+    background-color: #444660;
+    padding: 1.25rem;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+}
+caja2 > col1 > linea1,
+caja2 > col1 > linea2{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+caja2 > col1 > linea1 > lineaa,
+caja2 > col1 > linea1 > lineab,
+caja2 > col1 > linea2 > lineaa,
+caja2 > col1 > linea2 > lineab,
+caja2 > col1 > linea3 {
+    background-color: #0066a9;
+    height: 1.25rem;
+    flex-grow: 1;
+}
+caja2 > col1 > linea3 {
+    background-color: #509bbf;
+}
+caja2 > col2{
+    background-color: #ff353c;
+    padding: 1.25rem;
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+    flex-direction: column;
+}
+caja2 > col2 > linea1{
+    background-color: #ffe26e;
+    height: 1.25rem;
+}
+caja3 > linea1{
+    background-color: #efa100;
+    height: 1.25rem;
+}
+a.icono{
+    color: #808080;
+    text-decoration: none;
+    padding: 0 0.2rem;
+}
+a.icono:hover{
+    color: #000;
+    text-decoration: none;
+}
+a.icono span{
+    display: inline-block;
+    background-image: url("../img/iconos_16.png");
+    background-size: 16.25rem 3.6875rem;
+    min-width: 1.3rem;
+    height: 1.1rem;
+    margin-right: 0.8rem;
+}
+
+a.icono.no-text span{
+    margin: 0 0.2rem;
+}
+
+a.icono.inicio span{
+    background-position: 0 -2.5rem;
+}
+a.icono.inicio:hover span{
+    background-position: 0 0;
+}
+a.icono.rutas span{
+    background-position: -2.5rem -2.5rem;
+}
+a.icono.rutas:hover span{
+    background-position: -2.5rem 0;
+}
+a.icono.hoteles span{
+    background-position: -5rem -2.5rem;
+}
+a.icono.hoteles:hover span{
+    background-position: -5rem 0;
+}
+a.icono.vuelos span{
+    background-position: -7.5rem -2.5rem;
+}
+a.icono.vuelos:hover span{
+    background-position: -7.5rem 0;
+}
+a.icono.contacto span{
+    background-position: -10rem -2.5rem;
+}
+a.icono.contacto:hover span{
+    background-position: -10rem 0;
+}
+a.icono.facebook span{
+    background-position: -12.5rem -2.5rem;
+}
+a.icono.facebook:hover span{
+    background-position: -12.5rem 0;
+}
+a.icono.twitter span{
+    background-position: -15rem -2.5rem;
+}
+a.icono.twitter:hover span{
+    background-position: -15rem 0;
+}
+@media all and (max-width: 48rem) {
+    caja2{
+        background-color: #fff900;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 48rem) {
+    a.icono{
+        padding: 0.2rem 0.2rem;
+    }
+    caja1 > linea1 > col2{
+        flex-direction: column;
+    }
+    caja2{
+        background-color: #fff900;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 25rem) {
+    caja1{
+        background-position: center 44%;
+    }
+    caja1 > linea1 > col1,
+    caja1 > linea1 > col3{
+        justify-content: center;
+    }
+    caja1 > linea1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    caja1 > linea2{
+        height: 14.25rem;
+    }
+    caja2{
+        background-color: #ffd700;
+    }
+    caja2 > col1 {
+        background-color: #004866;
+    }
+    caja2 > col1 > linea1 > lineaa,
+    caja2 > col1 > linea1 > lineab,
+    caja2 > col1 > linea2 > lineaa,
+    caja2 > col1 > linea2 > lineab {
+        background-color: #428b92;
+    }
+    caja2 > col1 > linea3 {
+        background-color: #84d6c4;
+    }
+    caja2 > col2 {
+        background-color: #ff6d3c;
+    }
+
+    caja2 > col2 > linea1 {
+        background-color: #ffa654;
+    }
+    caja2 > col1 > linea1,
+    caja2 > col1 > linea2{
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}
