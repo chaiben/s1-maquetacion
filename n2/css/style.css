@@ -84,22 +84,27 @@ a.icono.twitter span{
 a.icono.twitter:hover span{
     background-position: -15rem 0;
 }
+caja2 > col1 > section{
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
 article{
     display: flex;
     gap: 0.25rem;
     flex-flow: column nowrap;
     background-color: #f6f1f1;
-    max-width: 25.825rem;
     padding: 0.625rem;
 }
 article > div.contenido{
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     margin : 0.8rem;
-}
-article > div.contenido > div.col{
-    flex-grow: 1;
 }
 article > div.foto{
     position: relative;
@@ -201,7 +206,6 @@ caja1 > linea2{
     color: #ff6430ad;
     justify-content: center;
     align-items: flex-end;
-    /* background-color: #ff6d21; */
 }
 caja1 > linea2 > col1{
     display: flex;
@@ -225,16 +229,6 @@ caja2 > col1{
     padding: 0.625rem;
 
 }
-caja2 > col1 > linea1,
-caja2 > col1 > linea2{
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-}
-caja2 > col1 > linea1 > lineaa,
-caja2 > col1 > linea1 > lineab,
-caja2 > col1 > linea2 > lineaa,
-caja2 > col1 > linea2 > lineab,
 caja2 > col1 > linea3 {
     background-color: #0066a9;
     height: 1.25rem;
@@ -250,6 +244,7 @@ caja2 > col2{
     flex-grow: 1;
     gap: 10px;
     flex-direction: column;
+    min-width: 12rem;
 }
 caja2 > col2 > linea1{
     background-color: #ffe26e;
@@ -270,16 +265,9 @@ caja3 > linea1{
         background-color: #fff900;
         flex-direction: column;
     }
-    caja2 > col1 > linea1, caja2 > col1 > linea2 {
-        flex-flow: column wrap;
-        align-self: center;
-    }
 }
 
 @media all and (max-width: 25rem) {
-    article > div.contenido{
-        flex-direction: column;
-    }
     caja1{
         background-position: center 44%;
     }
@@ -297,12 +285,6 @@ caja3 > linea1{
     caja2{
         background-color: #ffd700;
     }
-    caja2 > col1 > linea1 > lineaa,
-    caja2 > col1 > linea1 > lineab,
-    caja2 > col1 > linea2 > lineaa,
-    caja2 > col1 > linea2 > lineab {
-        background-color: #428b92;
-    }
     caja2 > col1 > linea3 {
         background-color: #84d6c4;
     }
@@ -312,11 +294,6 @@ caja3 > linea1{
 
     caja2 > col2 > linea1 {
         background-color: #ffa654;
-    }
-    caja2 > col1 > linea1,
-    caja2 > col1 > linea2{
-        flex-direction: column;
-        gap: 1.25rem;
     }
 }
 @keyframes fadeIn{
