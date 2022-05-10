@@ -6,8 +6,8 @@
 body{
     background-color: #fff;
     font-family: 'Helvetica', 'Arial', sans-serif;
-    letter-spacing: 0.1rem;
-    color: #808080;
+    letter-spacing: 0rem;
+    color: #535353;
     margin: 0;
 
 }
@@ -18,8 +18,63 @@ root{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     gap: 1.25rem;
+}
+article{
+    display: flex;
+    gap: 0.25rem;
+    flex-flow: column nowrap;
+    background-color: #f6f1f1;
+    max-width: 25.825rem;
+    padding: 0.625rem;
+}
+article > div.contenido{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin : 0.8rem;
+}
+article > div.contenido > div.col{
+    flex-grow: 1;
+}
+article > div.foto{
+    position: relative;
+}
+article > div.foto > img{
+    width:100%;
+}
+article > div.foto > div.fecha{
+    color: #F2E67E;
+    position: absolute;
+    bottom: 0.4rem;
+    margin: 0 0.8rem;
+    letter-spacing: -0.060625rem;
+}
+article > div.leer-mas{
+    position: relative;
+    margin: 0 0.8rem;
+}
+article > div.leer-mas > a{
+    color: #808080;
+    text-decoration: none;
+}
+article > div.leer-mas > a:hover{
+    color: #000;
+}
+article > div.titulo{
+    font-family: Arial Narrow,Arial,sans-serif; 
+    font-size: 1.4rem;
+    letter-spacing: 0.3125rem;
+    background-color: #ff787c;
+    color: #FCF3EA;
+    text-transform: uppercase;
+    height: 2.5rem;
+    position: relative;
+}
+article > div.titulo > span{
+    position: absolute;
+    bottom: 0.2rem;
+    margin: 0 0.8rem;
 }
 caja1, 
 caja2, 
@@ -94,12 +149,12 @@ caja2{
     flex-direction: row;
 }
 caja2 > col1{
-    background-color: #444660;
-    padding: 1.25rem;
+    background-color: #D8D7D7;
     flex-grow: 2;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.625rem;
+    padding: 0.625rem;
 
 }
 caja2 > col1 > linea1,
@@ -201,13 +256,6 @@ a.icono.twitter:hover span{
     background-position: -15rem 0;
 }
 @media all and (max-width: 48rem) {
-    caja2{
-        background-color: #fff900;
-        flex-direction: column;
-    }
-}
-
-@media all and (max-width: 48rem) {
     a.icono{
         padding: 0.2rem 0.2rem;
     }
@@ -218,9 +266,16 @@ a.icono.twitter:hover span{
         background-color: #fff900;
         flex-direction: column;
     }
+    caja2 > col1 > linea1, caja2 > col1 > linea2 {
+        flex-flow: column wrap;
+        align-self: center;
+    }
 }
 
 @media all and (max-width: 25rem) {
+    article > div.contenido{
+        flex-direction: column;
+    }
     caja1{
         background-position: center 44%;
     }
@@ -237,9 +292,6 @@ a.icono.twitter:hover span{
     }
     caja2{
         background-color: #ffd700;
-    }
-    caja2 > col1 {
-        background-color: #004866;
     }
     caja2 > col1 > linea1 > lineaa,
     caja2 > col1 > linea1 > lineab,
