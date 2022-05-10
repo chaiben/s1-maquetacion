@@ -20,6 +20,70 @@ root{
     justify-content: space-evenly;
     gap: 1.25rem;
 }
+a.icono{
+    color: #808080;
+    text-decoration: none;
+    padding: 0 0.2rem;
+}
+a.icono:hover{
+    color: #000;
+    text-decoration: none;
+}
+a.icono span{
+    display: inline-block;
+    background-image: url("../img/iconos_16.png");
+    background-size: 16.25rem 3.6875rem;
+    min-width: 1.3rem;
+    height: 1.1rem;
+    margin-right: 0.8rem;
+}
+
+a.icono.no-text span{
+    margin: 0 0.2rem;
+}
+
+a.icono.inicio span{
+    background-position: 0 -2.5rem;
+}
+a.icono.inicio:hover span{
+    background-position: 0 0;
+}
+a.icono.rutas span{
+    background-position: -2.5rem -2.5rem;
+}
+a.icono.rutas:hover span{
+    background-position: -2.5rem 0;
+}
+a.icono.hoteles span{
+    background-position: -5rem -2.5rem;
+}
+a.icono.hoteles:hover span{
+    background-position: -5rem 0;
+}
+a.icono.vuelos span{
+    background-position: -7.5rem -2.5rem;
+}
+a.icono.vuelos:hover span{
+    background-position: -7.5rem 0;
+}
+a.icono.contacto span{
+    background-position: -10rem -2.5rem;
+}
+a.icono.contacto:hover span{
+    background-position: -10rem 0;
+}
+a.icono.facebook span{
+    background-position: -12.5rem -2.5rem;
+}
+a.icono.facebook:hover span{
+    background-position: -12.5rem 0;
+}
+a.icono.twitter span{
+    background-position: -15rem -2.5rem;
+}
+a.icono.twitter:hover span{
+    background-position: -15rem 0;
+}
 article{
     display: flex;
     gap: 0.25rem;
@@ -108,15 +172,19 @@ caja1 > linea1 > col1{
     justify-content: center;
 }
 caja1 > linea1 > col1 .logo{
+    animation: fadeIn 1s ease-in;
     width: 4.375rem;
     height: 4.1875rem;
     align-self: center;
 }
 caja1 > linea1 > col2{
+    animation: moverAbajo 1s ease-in;
     justify-content: space-evenly;
     flex-grow: 4;
 }
 caja1 > linea1 > col3{
+    opacity: 0;
+    animation: moverIzquierda 1s ease-in 1.1s 1 normal both;
     justify-content: center;
 }
 caja1 > linea1 > col2 > a,
@@ -191,70 +259,6 @@ caja3 > linea1{
     background-color: #efa100;
     height: 1.25rem;
 }
-a.icono{
-    color: #808080;
-    text-decoration: none;
-    padding: 0 0.2rem;
-}
-a.icono:hover{
-    color: #000;
-    text-decoration: none;
-}
-a.icono span{
-    display: inline-block;
-    background-image: url("../img/iconos_16.png");
-    background-size: 16.25rem 3.6875rem;
-    min-width: 1.3rem;
-    height: 1.1rem;
-    margin-right: 0.8rem;
-}
-
-a.icono.no-text span{
-    margin: 0 0.2rem;
-}
-
-a.icono.inicio span{
-    background-position: 0 -2.5rem;
-}
-a.icono.inicio:hover span{
-    background-position: 0 0;
-}
-a.icono.rutas span{
-    background-position: -2.5rem -2.5rem;
-}
-a.icono.rutas:hover span{
-    background-position: -2.5rem 0;
-}
-a.icono.hoteles span{
-    background-position: -5rem -2.5rem;
-}
-a.icono.hoteles:hover span{
-    background-position: -5rem 0;
-}
-a.icono.vuelos span{
-    background-position: -7.5rem -2.5rem;
-}
-a.icono.vuelos:hover span{
-    background-position: -7.5rem 0;
-}
-a.icono.contacto span{
-    background-position: -10rem -2.5rem;
-}
-a.icono.contacto:hover span{
-    background-position: -10rem 0;
-}
-a.icono.facebook span{
-    background-position: -12.5rem -2.5rem;
-}
-a.icono.facebook:hover span{
-    background-position: -12.5rem 0;
-}
-a.icono.twitter span{
-    background-position: -15rem -2.5rem;
-}
-a.icono.twitter:hover span{
-    background-position: -15rem 0;
-}
 @media all and (max-width: 48rem) {
     a.icono{
         padding: 0.2rem 0.2rem;
@@ -313,5 +317,33 @@ a.icono.twitter:hover span{
     caja2 > col1 > linea2{
         flex-direction: column;
         gap: 1.25rem;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes moverAbajo{
+    0%{
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
     }
 }
